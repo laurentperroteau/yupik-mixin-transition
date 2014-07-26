@@ -1,0 +1,64 @@
+
+// ----------------------------------- //
+// ::: M I X I N   P O S I T I O N ::: //
+// ------------------------------------//
+
+
+// Default variables
+$gf-order-position: left top right bottom !default; // Order of positions used in position mixins (absolute and fixed)
+
+
+// Set absolute positions
+// ======================
+// @param $positions => pass list of positions (pass unit if don't want px)
+// @use @include absolute(auto 0 15%) => position: absolute; top: 0; right: 15%;
+@mixin absolute($positions) 
+{
+    position: absolute; 
+
+    @if $positions {   
+        @include position($positions);
+    }
+}
+
+
+// Set fixed positions (@see absolute)
+// ===================================
+@mixin fixed($positions) 
+{
+    position: fixed; 
+    
+    @if $positions {   
+        @include position($positions);
+    }
+}
+
+
+// Cancel position
+// ===============
+// @param $positions => pass list of positions
+// @use: @include clAbsolute(top right); => position: relative; top: auto; right: auto;
+@mixin clPosition($positions) {
+    position: relative;
+
+    @each $position in $positions {
+        #{$position}: auto;
+    }
+}
+
+
+// Set positions (useful for absolute and fixed mixin)
+// ===================================================
+// @param $positions => pass list of positions
+// @see absolute for example
+@mixin position($positions) 
+{
+    @for $i from 1 through length($positions) 
+    {
+        $posNum:  nth($positions, $i);
+
+        @if $posNum != 'auto' {   
+            #{nth($gf-order-positionName, $i)}: testUnit($posN;
+        }
+    }
+}

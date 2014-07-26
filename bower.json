@@ -1,0 +1,26 @@
+{
+  "name": "grand-wazoo-mixin-position",
+  "version": "0.0.1",
+  "homepage": "https://github.com/laurentperroteau/grand-wazoo-dropdown",
+  "authors": [
+    "laurentperroteau <laurentperroteau@gmail.com>"
+  ],
+  "description": "Mixins that simplified the use of position property",
+  "main": "_ui.dropdown.scss",
+  "keywords": [
+    "grandwazoo",
+    "inuitcss",
+    "oocss",
+    "sass",
+    "scss",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
