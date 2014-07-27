@@ -24,6 +24,6 @@
     "tests"
   ],
   "dependencies": {
-    "grand-wazoo-function": "git://github.com/laurentperroteau/grand-wazoo-function.git"
+    "grand-wazoo-function": "git://github.com/laurentperroteau/grand-wazoo-function.git#~0.0.1"
   }
 }
