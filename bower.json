@@ -1,7 +1,7 @@
 {
   "name": "grand-wazoo-mixin-position",
   "version": "0.0.1",
-  "homepage": "https://github.com/laurentperroteau/grand-wazoo-dropdown",
+  "homepage": "https://github.com/laurentperroteau/grand-wazoo-mixin-position",
   "authors": [
     "laurentperroteau <laurentperroteau@gmail.com>"
   ],
@@ -22,5 +22,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "grand-wazoo-function": "git://github.com/laurentperroteau/grand-wazoo-function.git"
+  }
 }

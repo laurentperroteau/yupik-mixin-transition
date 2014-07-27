@@ -1,7 +1,7 @@
 
-// ----------------------------------- //
-// ::: M I X I N   P O S I T I O N ::: //
-// ------------------------------------//
+// ----------------------------------------------------------- //
+// ::: G R A N D   W A Z O O   M I X I N   P O S I T I O N ::: //
+// ----------------------------------------------------------- //
 
 
 // Default variables
@@ -38,7 +38,7 @@ $gf-order-position: left top right bottom !default; // Order of positions used i
 // ===============
 // @param $positions => pass list of positions
 // @use: @include clAbsolute(top right); => position: relative; top: auto; right: auto;
-@mixin clPosition($positions) {
+@mixin cl-position($positions) {
     position: relative;
 
     @each $position in $positions {
@@ -58,7 +58,7 @@ $gf-order-position: left top right bottom !default; // Order of positions used i
         $posNum:  nth($positions, $i);
 
         @if $posNum != 'auto' {   
-            #{nth($gf-order-positionName, $i)}: testUnit($posN;
+            #{nth($gf-order-positionName, $i)}: testUnit($posNum);
         }
     }
 }
