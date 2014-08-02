@@ -1,12 +1,12 @@
 {
-  "name": "grand-wazoo-mixin-position",
-  "version": "0.0.1",
-  "homepage": "https://github.com/laurentperroteau/grand-wazoo-mixin-position",
+  "name": "yupik-mixin-position",
+  "version": "0.0.2",
+  "homepage": "https://github.com/laurentperroteau/yupik-mixin-position",
   "authors": [
     "laurentperroteau <laurentperroteau@gmail.com>"
   ],
   "description": "Mixins that simplified the use of position property",
-  "main": "_ui.dropdown.scss",
+  "main": "_mixin.position.scss",
   "keywords": [
     "grandwazoo",
     "inuitcss",
@@ -24,6 +24,6 @@
     "tests"
   ],
   "dependencies": {
-    "grand-wazoo-function": "git://github.com/laurentperroteau/grand-wazoo-function.git#~0.0.1"
+    "yupik-function": "~0.0.1"
   }
 }

@@ -1,4 +1,4 @@
-Grand Wazoo Mixin Position
+Yupik Mixin Position
 ==========================
 
 ## reworking in progress !
@@ -7,4 +7,4 @@ Grand Wazoo Mixin Position
 
 Install using Bower:
 
-    $ bower install --save git://github.com/laurentperroteau/grand-wazoo-mixin-position.git
+    $ bower install --save yupik-mixin-position
