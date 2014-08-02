@@ -38,11 +38,18 @@ $gf-order-position: left top right bottom !default; // Order of positions used i
 // ===============
 // @param $positions => pass list of positions
 // @use: @include clAbsolute(top right); => position: relative; top: auto; right: auto;
-@mixin cl-position($positions) {
-    position: relative;
+@mixin cl-position($positions: null) {
 
-    @each $position in $positions {
-        #{$position}: auto;
+    @if ($positions) 
+    {
+        position: relative;
+
+        @each $position in $positions {
+            #{$position}: auto;
+        }
+    }
+    @else {
+        @warn "To use @include cl-position(), you need pass almost one position like left, top, right or bottom";
     }
 }
 
