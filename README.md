@@ -5,7 +5,7 @@ Yupik Transition
 
 ### Useful placeholders for CSS3 transition
 
->  Work in IE9+ (working in IE8 but without transition).
+>  Equivalent to jQuery slide up/down and fade in/out, work in IE9+ (working in IE8 but without transition).
 
 Install using Bower:
 
@@ -15,20 +15,14 @@ Install using Bower:
 How does this work?
 --------------------------------------------------
 
-Change setting is you need:
+Change setting if you need:
 ````scss
-
 $yupik-transition-duration  : 200ms;
 $yupik-transition-ease      : linear;
 ````
 
 Copy these transition placeholders  in your style:
-
 ````scss
-
-$yupik-transition-duration  : 200ms !default;
-$yupik-transition-ease      : linear !default;
-
 %transition-slide-up { 
     max-height: 0; 
     overflow: hidden; visibility: hidden;
