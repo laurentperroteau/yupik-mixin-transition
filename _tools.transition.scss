@@ -1,0 +1,102 @@
+
+// ::: A N I M A T I O N   M I X I N S ::: //
+// ----------------------------------------//
+// @todo => séparer l'ajout transition avec l'action de caché ou montrer parceque l'on peut vouloir par exemple un élement visible opacity: 1 puis le passer à 0
+
+
+// Custom easing: @see => http://matthewlein.com/ceaser/
+$yupik-transition-ease-fade : cubic-bezier(0.25, 0.46, 0.45, 0.94) !default;
+$yupik-transition-ease-slide: ease-in-out !default; 
+$yupik-transition-ease-prog : cubic-bezier(0.000, 0.650, 0.705, 0.920) !default;
+
+// Default values
+$yupik-transition-duration  : 200ms !default;
+$yupik-transition-ease      : linear !default;
+
+
+// Transition slide animation
+// ==========================
+// @param $duration (optional) | default duration => $yupik-transition-duration
+// @param $easing (optional) | default easing => $yupik-transition-ease-slide
+@mixin transition-slide-animation($param: null) {
+
+    $duration: $yupik-transition-duration;
+    $easing  : $yupik-transition-ease-slide;
+
+    @if $param { 
+        $duration: nth($param, 1); 
+    }
+
+    @if length($param) >= 2 { 
+        $easing: nth($param, 2); 
+    }
+
+    @include transition-property(max-height, visibility);
+    @include transition-duration($duration);
+    @include transition-timing-function($easing);
+}
+
+
+// Transition opacity zero
+// =======================
+// @see transition-slide-up mixin above
+// default easing => linear
+@mixin transition-opacity-transition($param: null) {
+
+    $duration: $yupik-transition-duration;
+    $easing: linear;
+    
+    @if $param { 
+        $duration: nth($param, 1); 
+    }
+
+    @if length($param) >= 2 { 
+        $easing: nth($param, 2); 
+    }
+
+    @include transition-property(opacity, visibility);
+    @include transition-duration-and-easing($duration, $easing);
+}
+
+
+
+// Mixin useful in mixins above
+@mixin transition-duration-and-easing($duration: $yupik-transition-duration, $easing: $yupik-transition-ease) {
+
+    @include transition-duration($duration);
+    @include transition-timing-function($easing);
+}
+
+/* ------------------------- */
+/* ::: A N I M A T I O N ::: */
+/* ------------------------- */
+
+
+// Copy these transition placeholders  in your style
+// =================================================
+// => @see base/mixin/animation for equivalent with mixin
+// => @use @extend %transition-slide-up; (on close state)
+//         @extend %transition-slide-down; (on open state)
+// => DON'T USE IN MEDIA QUERIES !
+
+// %transition-slide-up { 
+//     max-height: 0; 
+//     overflow: hidden; visibility: hidden;
+//     @include transition-slide-animation;
+//     // or
+//     @include transition-slide-animation(myDuration myEasing);
+// }
+
+// %transition-slide-down { 
+//     max-height: 500px; // change value if block higher than 500px
+//     visibility: visible;
+// }
+
+// %transition-opacity-zero { 
+//     @include opacity(0); visibility: hidden;
+//     @include transition-opacity-transition;
+// }
+
+// %transition-opacity-one { 
+//     @include opacity(1); visibility: visible;
+// }
