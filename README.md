@@ -45,3 +45,14 @@ Copy these transition placeholders  in your style:
     @include opacity(1); visibility: visible;
 }
 ````
+
+And in your style:
+````scss
+.block {
+    @extend %transition-slide-up;
+
+    &.is-open {
+        @extend %transition-slide-down;
+    }
+}
+````
