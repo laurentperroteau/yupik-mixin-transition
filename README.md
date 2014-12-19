@@ -13,7 +13,7 @@ Install using Bower:
 
 
 How does this work?
---------------------------------------------------
+-------------------
 
 Import compass:
 ````scss

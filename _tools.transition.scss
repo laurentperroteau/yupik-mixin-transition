@@ -31,9 +31,8 @@ $yupik-transition-ease      : linear !default;
         $easing: nth($param, 2); 
     }
 
-    @include transition-property(max-height, visibility);
-    @include transition-duration($duration);
-    @include transition-timing-function($easing);
+    @include vendor(transition-property, (max-height, visibility) );
+    @include transition-duration-and-easing($duration, $easing);
 }
 
 
@@ -54,7 +53,7 @@ $yupik-transition-ease      : linear !default;
         $easing: nth($param, 2); 
     }
 
-    @include transition-property(opacity, visibility);
+    @include vendor(transition-property, (opacity, visibility) );
     @include transition-duration-and-easing($duration, $easing);
 }
 
@@ -63,8 +62,8 @@ $yupik-transition-ease      : linear !default;
 // Mixin useful in mixins above
 @mixin transition-duration-and-easing($duration: $yupik-transition-duration, $easing: $yupik-transition-ease) {
 
-    @include transition-duration($duration);
-    @include transition-timing-function($easing);
+    @include vendor(transition-duration, $duration);
+    @include vendor(transition-timing-function, $easing);
 }
 
 /* ------------------------- */
@@ -93,10 +92,12 @@ $yupik-transition-ease      : linear !default;
 // }
 
 // %transition-opacity-zero { 
-//     @include opacity(0); visibility: hidden;
+//     opacity: 0; // need callback for IE
+//     visibility: hidden;
 //     @include transition-opacity-transition;
 // }
 
 // %transition-opacity-one { 
-//     @include opacity(1); visibility: visible;
+//     opacity: 1; // need callback for IE
+//     visibility: visible;
 // }
