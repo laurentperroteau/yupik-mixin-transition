@@ -6,7 +6,7 @@
     "laurentperroteau <laurentperroteau@gmail.com>"
   ],
   "description": "Useful placeholders for CSS3 transition",
-  "main": "_tools.transition.scss",
+  "main": "_mixins.transition.scss",
   "keywords": [
     "grandwazoo",
     "inuitcss",

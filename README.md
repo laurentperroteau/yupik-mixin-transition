@@ -1,11 +1,11 @@
-Yupik Transition
-================
+Yupik Mixin Transition
+======================
 
 ## reworking in progress !
 
 ### Useful placeholders for CSS3 transition
 
->  Equivalent to jQuery slide up/down and fade in/out, work in IE9+ (working in IE8 but without transition), using compass.
+>  Equivalent to jQuery slide up/down and fade in/out, work in IE9+ (working in IE8 but without transition)
 
 Install using Bower:
 
@@ -14,12 +14,6 @@ Install using Bower:
 
 How does this work?
 -------------------
-
-Import compass:
-````scss
-@import "compass/css3/opacity";
-@import "compass/css3/transition";
-````
 
 Change settings if you need:
 ````scss
@@ -52,7 +46,7 @@ Copy these transition placeholders  in your style:
 }
 ````
 
-And in your style:
+And apply these at your classes:
 ````scss
 .block {
     @extend %transition-slide-up;
