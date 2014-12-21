@@ -9,7 +9,7 @@ Yupik Mixin Transition
 
 Install using Bower:
 
-    $ bower install --save yupik-transition
+    $ bower install --save yupik-mixin-transition
 
 
 How does this work?
