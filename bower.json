@@ -1,5 +1,5 @@
 {
-  "name": "yupik-transition",
+  "name": "yupik-mixin-transition",
   "version": "0.0.1",
   "homepage": "https://github.com/laurentperroteau/yupik-mixin-font",
   "authors": [
@@ -22,5 +22,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "yupik-mixin-vendor": "~0.0.1"
+  }
 }

@@ -1,9 +1,9 @@
 Yupik Mixin Transition
 ======================
 
-## reworking in progress !
-
 ### Useful placeholders for CSS3 transition
+
+> Is part of [Yupik collection of modules](https://github.com/laurentperroteau/yupik)
 
 >  Equivalent to jQuery slide up/down and fade in/out, work in IE9+ (working in IE8 but without transition)
 
