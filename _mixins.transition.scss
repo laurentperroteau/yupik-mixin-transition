@@ -66,6 +66,15 @@ $yupik-transition-ease      : linear !default;
     @include vendor(transition-timing-function, $easing);
 }
 
+// Keyframes
+// =========
+@mixin keyframes($animation) {
+
+    @keyframes #{$animation} {
+        @content;
+    }
+}
+
 /* ------------------------- */
 /* ::: A N I M A T I O N ::: */
 /* ------------------------- */
